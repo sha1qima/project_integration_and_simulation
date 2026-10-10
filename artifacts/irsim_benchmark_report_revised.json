@@ -1,0 +1,40 @@
+{
+  "total_worlds": 4,
+  "goals_reached": 0,
+  "success_rate": 0.0,
+  "efficient_worlds": 0,
+  "inefficient_success_worlds": 0,
+  "failed_worlds": 4,
+  "efficiency_rate": 0.0,
+  "average_steps_taken": 300.0,
+  "results": [
+    {
+      "reached_goal": false,
+      "collision_or_done": true,
+      "steps_taken": 300,
+      "efficiency_status": "failed",
+      "world": "irsim_worlds/world_easy.yaml"
+    },
+    {
+      "reached_goal": false,
+      "collision_or_done": true,
+      "steps_taken": 300,
+      "efficiency_status": "failed",
+      "world": "irsim_worlds/world_medium.yaml"
+    },
+    {
+      "reached_goal": false,
+      "collision_or_done": true,
+      "steps_taken": 300,
+      "efficiency_status": "failed",
+      "world": "irsim_worlds/world_hard.yaml"
+    },
+    {
+      "reached_goal": false,
+      "collision_or_done": true,
+      "steps_taken": 300,
+      "efficiency_status": "failed",
+      "world": "irsim_worlds/world_custom.yaml"
+    }
+  ]
+}

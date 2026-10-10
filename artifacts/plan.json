@@ -1,0 +1,34 @@
+{
+  "strategy": "Navigate toward goal if safe, fallback to obstacle avoidance",
+  "decisions": [
+    {
+      "condition": "goal_ahead is true and front_blocked is false",
+      "action": "FORWARD"
+    },
+    {
+      "condition": "goal_on_left is true and left_blocked is false",
+      "action": "LEFT"
+    },
+    {
+      "condition": "goal_on_right is true and right_blocked is false",
+      "action": "RIGHT"
+    },
+    {
+      "condition": "front_blocked is false",
+      "action": "FORWARD"
+    },
+    {
+      "condition": "left_blocked is false",
+      "action": "LEFT"
+    },
+    {
+      "condition": "right_blocked is false",
+      "action": "RIGHT"
+    },
+    {
+      "condition": "front_blocked is true and left_blocked is true and right_blocked is true",
+      "action": "STOP"
+    }
+  ],
+  "stop_condition": "all directions are blocked"
+}

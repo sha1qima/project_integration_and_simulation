@@ -1,0 +1,182 @@
+.FFFFFF                                                                  [100%]
+================================== FAILURES ===================================
+_____________________ test_decide_next_move[state1-LEFT] ______________________
+
+state = {'goal_on_left': True, 'left_blocked': False}, expected = 'LEFT'
+
+    @pytest.mark.parametrize("state, expected", [
+        ({"goal_ahead": True, "front_blocked": False}, "FORWARD"),
+        ({"goal_on_left": True, "left_blocked": False}, "LEFT"),
+        ({"goal_on_right": True, "right_blocked": False}, "RIGHT"),
+        ({"front_blocked": False, "left_blocked": True, "right_blocked": True}, "FORWARD"),
+        ({"front_blocked": True, "left_blocked": False, "right_blocked": True}, "LEFT"),
+        ({"front_blocked": True, "left_blocked": True, "right_blocked": False}, "RIGHT"),
+        ({"front_blocked": True, "left_blocked": True, "right_blocked": True}, "STOP"),
+    ])
+    def test_decide_next_move(state, expected):
+>       assert decide_next_move(state) in {"FORWARD", "LEFT", "RIGHT", "STOP"} and decide_next_move(state) == expected
+               ^^^^^^^^^^^^^^^^^^^^^^^
+
+test_generated_navigation_logic.py:23: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+state = {'goal_on_left': True, 'left_blocked': False}
+
+    def decide_next_move(state):
+>       if state["goal_ahead"] and not state["front_blocked"]:
+           ^^^^^^^^^^^^^^^^^^^
+E       KeyError: 'goal_ahead'
+
+artifacts\navigation_logic.py:2: KeyError
+_____________________ test_decide_next_move[state2-RIGHT] _____________________
+
+state = {'goal_on_right': True, 'right_blocked': False}, expected = 'RIGHT'
+
+    @pytest.mark.parametrize("state, expected", [
+        ({"goal_ahead": True, "front_blocked": False}, "FORWARD"),
+        ({"goal_on_left": True, "left_blocked": False}, "LEFT"),
+        ({"goal_on_right": True, "right_blocked": False}, "RIGHT"),
+        ({"front_blocked": False, "left_blocked": True, "right_blocked": True}, "FORWARD"),
+        ({"front_blocked": True, "left_blocked": False, "right_blocked": True}, "LEFT"),
+        ({"front_blocked": True, "left_blocked": True, "right_blocked": False}, "RIGHT"),
+        ({"front_blocked": True, "left_blocked": True, "right_blocked": True}, "STOP"),
+    ])
+    def test_decide_next_move(state, expected):
+>       assert decide_next_move(state) in {"FORWARD", "LEFT", "RIGHT", "STOP"} and decide_next_move(state) == expected
+               ^^^^^^^^^^^^^^^^^^^^^^^
+
+test_generated_navigation_logic.py:23: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+state = {'goal_on_right': True, 'right_blocked': False}
+
+    def decide_next_move(state):
+>       if state["goal_ahead"] and not state["front_blocked"]:
+           ^^^^^^^^^^^^^^^^^^^
+E       KeyError: 'goal_ahead'
+
+artifacts\navigation_logic.py:2: KeyError
+____________________ test_decide_next_move[state3-FORWARD] ____________________
+
+state = {'front_blocked': False, 'left_blocked': True, 'right_blocked': True}
+expected = 'FORWARD'
+
+    @pytest.mark.parametrize("state, expected", [
+        ({"goal_ahead": True, "front_blocked": False}, "FORWARD"),
+        ({"goal_on_left": True, "left_blocked": False}, "LEFT"),
+        ({"goal_on_right": True, "right_blocked": False}, "RIGHT"),
+        ({"front_blocked": False, "left_blocked": True, "right_blocked": True}, "FORWARD"),
+        ({"front_blocked": True, "left_blocked": False, "right_blocked": True}, "LEFT"),
+        ({"front_blocked": True, "left_blocked": True, "right_blocked": False}, "RIGHT"),
+        ({"front_blocked": True, "left_blocked": True, "right_blocked": True}, "STOP"),
+    ])
+    def test_decide_next_move(state, expected):
+>       assert decide_next_move(state) in {"FORWARD", "LEFT", "RIGHT", "STOP"} and decide_next_move(state) == expected
+               ^^^^^^^^^^^^^^^^^^^^^^^
+
+test_generated_navigation_logic.py:23: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+state = {'front_blocked': False, 'left_blocked': True, 'right_blocked': True}
+
+    def decide_next_move(state):
+>       if state["goal_ahead"] and not state["front_blocked"]:
+           ^^^^^^^^^^^^^^^^^^^
+E       KeyError: 'goal_ahead'
+
+artifacts\navigation_logic.py:2: KeyError
+_____________________ test_decide_next_move[state4-LEFT] ______________________
+
+state = {'front_blocked': True, 'left_blocked': False, 'right_blocked': True}
+expected = 'LEFT'
+
+    @pytest.mark.parametrize("state, expected", [
+        ({"goal_ahead": True, "front_blocked": False}, "FORWARD"),
+        ({"goal_on_left": True, "left_blocked": False}, "LEFT"),
+        ({"goal_on_right": True, "right_blocked": False}, "RIGHT"),
+        ({"front_blocked": False, "left_blocked": True, "right_blocked": True}, "FORWARD"),
+        ({"front_blocked": True, "left_blocked": False, "right_blocked": True}, "LEFT"),
+        ({"front_blocked": True, "left_blocked": True, "right_blocked": False}, "RIGHT"),
+        ({"front_blocked": True, "left_blocked": True, "right_blocked": True}, "STOP"),
+    ])
+    def test_decide_next_move(state, expected):
+>       assert decide_next_move(state) in {"FORWARD", "LEFT", "RIGHT", "STOP"} and decide_next_move(state) == expected
+               ^^^^^^^^^^^^^^^^^^^^^^^
+
+test_generated_navigation_logic.py:23: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+state = {'front_blocked': True, 'left_blocked': False, 'right_blocked': True}
+
+    def decide_next_move(state):
+>       if state["goal_ahead"] and not state["front_blocked"]:
+           ^^^^^^^^^^^^^^^^^^^
+E       KeyError: 'goal_ahead'
+
+artifacts\navigation_logic.py:2: KeyError
+_____________________ test_decide_next_move[state5-RIGHT] _____________________
+
+state = {'front_blocked': True, 'left_blocked': True, 'right_blocked': False}
+expected = 'RIGHT'
+
+    @pytest.mark.parametrize("state, expected", [
+        ({"goal_ahead": True, "front_blocked": False}, "FORWARD"),
+        ({"goal_on_left": True, "left_blocked": False}, "LEFT"),
+        ({"goal_on_right": True, "right_blocked": False}, "RIGHT"),
+        ({"front_blocked": False, "left_blocked": True, "right_blocked": True}, "FORWARD"),
+        ({"front_blocked": True, "left_blocked": False, "right_blocked": True}, "LEFT"),
+        ({"front_blocked": True, "left_blocked": True, "right_blocked": False}, "RIGHT"),
+        ({"front_blocked": True, "left_blocked": True, "right_blocked": True}, "STOP"),
+    ])
+    def test_decide_next_move(state, expected):
+>       assert decide_next_move(state) in {"FORWARD", "LEFT", "RIGHT", "STOP"} and decide_next_move(state) == expected
+               ^^^^^^^^^^^^^^^^^^^^^^^
+
+test_generated_navigation_logic.py:23: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+state = {'front_blocked': True, 'left_blocked': True, 'right_blocked': False}
+
+    def decide_next_move(state):
+>       if state["goal_ahead"] and not state["front_blocked"]:
+           ^^^^^^^^^^^^^^^^^^^
+E       KeyError: 'goal_ahead'
+
+artifacts\navigation_logic.py:2: KeyError
+_____________________ test_decide_next_move[state6-STOP] ______________________
+
+state = {'front_blocked': True, 'left_blocked': True, 'right_blocked': True}
+expected = 'STOP'
+
+    @pytest.mark.parametrize("state, expected", [
+        ({"goal_ahead": True, "front_blocked": False}, "FORWARD"),
+        ({"goal_on_left": True, "left_blocked": False}, "LEFT"),
+        ({"goal_on_right": True, "right_blocked": False}, "RIGHT"),
+        ({"front_blocked": False, "left_blocked": True, "right_blocked": True}, "FORWARD"),
+        ({"front_blocked": True, "left_blocked": False, "right_blocked": True}, "LEFT"),
+        ({"front_blocked": True, "left_blocked": True, "right_blocked": False}, "RIGHT"),
+        ({"front_blocked": True, "left_blocked": True, "right_blocked": True}, "STOP"),
+    ])
+    def test_decide_next_move(state, expected):
+>       assert decide_next_move(state) in {"FORWARD", "LEFT", "RIGHT", "STOP"} and decide_next_move(state) == expected
+               ^^^^^^^^^^^^^^^^^^^^^^^
+
+test_generated_navigation_logic.py:23: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+state = {'front_blocked': True, 'left_blocked': True, 'right_blocked': True}
+
+    def decide_next_move(state):
+>       if state["goal_ahead"] and not state["front_blocked"]:
+           ^^^^^^^^^^^^^^^^^^^
+E       KeyError: 'goal_ahead'
+
+artifacts\navigation_logic.py:2: KeyError
+=========================== short test summary info ===========================
+FAILED test_generated_navigation_logic.py::test_decide_next_move[state1-LEFT]
+FAILED test_generated_navigation_logic.py::test_decide_next_move[state2-RIGHT]
+FAILED test_generated_navigation_logic.py::test_decide_next_move[state3-FORWARD]
+FAILED test_generated_navigation_logic.py::test_decide_next_move[state4-LEFT]
+FAILED test_generated_navigation_logic.py::test_decide_next_move[state5-RIGHT]
+FAILED test_generated_navigation_logic.py::test_decide_next_move[state6-STOP]
+6 failed, 1 passed in 0.47s

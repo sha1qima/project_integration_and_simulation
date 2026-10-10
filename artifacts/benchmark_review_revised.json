@@ -1,0 +1,9 @@
+{
+  "issue": "Unsafe benchmark behavior detected; Goal completion failure; Successful but inefficient navigation",
+  "likely_cause": "Robot collided with an obstacle without reaching the goal; Only 0/4 worlds reached the goal (success_rate=0.00); 0 worlds were successful but inefficient (efficiency_rate=0.00)",
+  "recommendation": "Improve obstacle avoidance and ensure safe STOP when all directions are blocked; Review goal-directed decisions and ensure the robot does not get stuck; Reduce unnecessary turns/steps; prefer direct goal-directed motion",
+  "safety_passed": false,
+  "goal_completion_passed": false,
+  "efficiency_passed": false,
+  "needs_revision": true
+}
